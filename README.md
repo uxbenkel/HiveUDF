@@ -2,6 +2,15 @@
 
 使用JDK 17 构建，需下载 [依赖包](https://mvnrepository.com/artifact/org.apache.hive/hive-exec/3.1.3)
 
+1、HiveDecode：提供类似Oracle的decode函数的转码功能 支持多个码值同时转换
+
+2、LinearScoreCalculation：线性得分计算
+
+3、NearestTimeSelect：判断给定的时间在另一组时间内最接近的值
+
+4、TimeRangeMatch：判断给定的时间是否处于一组时间区间内
+
+
 使用方法 (以下路径仅为示例, 需要上传 jar 包到实际运行的 hdfs 地址, 然后引用此地址)
 
 ```shell
