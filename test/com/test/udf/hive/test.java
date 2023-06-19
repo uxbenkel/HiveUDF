@@ -1,9 +1,6 @@
 package com.test.udf.hive;
 
-import com.hive.udf.HiveDecode;
-import com.hive.udf.LinearScoreCalculation;
-import com.hive.udf.NearestTimeSelect;
-import com.hive.udf.TimeRangeMatch;
+import com.hive.udf.*;
 
 public class test {
     public static void main(String[] args) {
@@ -27,6 +24,11 @@ public class test {
 
         LinearScoreCalculation lsc = new LinearScoreCalculation();
         String result7 = lsc.evaluate("0.25", "A", "0.0,0.1,0.2,0.29,0.4,0.5", "0,60,70,80,90,100");
-        System.out.println(result7);
+
+        RemoveDupe rd = new RemoveDupe();
+        String result8 = rd.evaluate("1,2,3,3,4");
+        System.out.println(result8);
+        String result9 = rd.evaluate("1|2|3|5|5|1", "|");
+        System.out.println(result9);
     }
 }
