@@ -10,6 +10,7 @@
 
 4、TimeRangeMatch：判断给定的时间是否处于一组时间区间内
 
+5、RemoveDupe：提供类似 hive 的 collect_set 函数的数组元素去重功能
 
 使用方法 (以下路径仅为示例, 需要上传 jar 包到实际运行的 hdfs 地址, 然后引用此地址)
 
@@ -25,4 +26,7 @@ create temporary function time_nearest as 'com.hive.udf.NearestTimeSelect';
 
 add jar hdfs:///apps/hduser/hive_udf/TimeRangeMatch-1.0.jar;
 create temporary function time_match as 'com.hive.udf.TimeRangeMatch';
+
+add jar hdfs:///apps/hduser/hive_udf/RemoveDupe-1.0.jar;
+create temporary function remove_dupe as 'com.hive.udf.RemoveDupe';
 ```
