@@ -4,7 +4,9 @@
     <root id="archive" name="StringCompare.jar">
       <element id="directory" name="com">
         <element id="directory" name="hive">
-          <element id="directory" name="udf" />
+          <element id="directory" name="udf">
+            <element id="file-copy" path="$PROJECT_DIR$/out/production/HiveUDF/com/hive/udf/StringCompare.class" />
+          </element>
         </element>
       </element>
       <element id="directory" name="META-INF">
