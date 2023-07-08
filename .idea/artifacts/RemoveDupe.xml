@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="RemoveDupe">
+    <output-path>$PROJECT_DIR$/out/artifacts/RemoveDupe</output-path>
+    <root id="archive" name="RemoveDupe.jar">
+      <element id="directory" name="com">
+        <element id="directory" name="hive">
+          <element id="directory" name="udf">
+            <element id="file-copy" path="$PROJECT_DIR$/out/production/HiveUDF/com/hive/udf/RemoveDupe.class" />
+          </element>
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
