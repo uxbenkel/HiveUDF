@@ -12,6 +12,8 @@
 
 5、RemoveDupe：提供类似 hive 的 collect_set 函数的数组元素去重功能
 
+6、StringCompare：提供两个字符串之间的比较，输出相似度
+
 使用方法 (以下路径仅为示例, 需要上传 jar 包到实际运行的 hdfs 地址, 然后引用此地址)
 
 ```shell
@@ -29,4 +31,7 @@ create temporary function time_match as 'com.hive.udf.TimeRangeMatch';
 
 add jar hdfs:///apps/hduser/hive_udf/RemoveDupe-1.0.jar;
 create temporary function remove_dupe as 'com.hive.udf.RemoveDupe';
+
+add jar hdfs:///apps/hduser/hive_udf/StringCompare-1.0.jar;
+create temporary function string_compare as 'com.hive.udf.StringCompare';
 ```
