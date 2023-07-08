@@ -30,5 +30,9 @@ public class test {
         System.out.println(result8);
         String result9 = rd.evaluate("1|2|3|5|5|1", "|");
         System.out.println(result9);
+
+        StringCompare sc = new StringCompare();
+        Double result10 = sc.evaluate("北京市东城区", "北京市东城区第一医院", "MAX");
+        System.out.println(result10);
     }
 }
