@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="jar" name="RemoveDupe">
-    <output-path>$PROJECT_DIR$/out/artifacts/RemoveDupe</output-path>
+    <output-path>$PROJECT_DIR$/out/artifacts</output-path>
     <root id="archive" name="RemoveDupe.jar">
       <element id="directory" name="com">
         <element id="directory" name="hive">
