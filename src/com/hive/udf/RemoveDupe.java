@@ -27,7 +27,7 @@ public class RemoveDupe extends UDF {
         String regexpDelimiter = ",";
 
         // 入参空值处理
-        if (sourceColumns == null || ("\\N").equals(sourceColumns) || ("").equals(sourceColumns)) {
+        if (sourceColumns == null || ("\\N").equals(sourceColumns) || sourceColumns.isEmpty()) {
             return null;
         }
 

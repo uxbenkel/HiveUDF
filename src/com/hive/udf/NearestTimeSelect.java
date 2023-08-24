@@ -22,7 +22,7 @@ public class NearestTimeSelect extends UDF {
         // 设定返回值
         String nearestTime = null;
         // 入参空置处理
-        if (time == null || timeRanges == null || ("\\N").equals(time) || ("\\N").equals(timeRanges) || ("").equals(time) || ("").equals(timeRanges)) {
+        if (time == null || timeRanges == null || ("\\N").equals(time) || ("\\N").equals(timeRanges) || time.isEmpty() || timeRanges.isEmpty()) {
             return null;
         }
 

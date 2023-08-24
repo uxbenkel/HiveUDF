@@ -24,7 +24,7 @@ public class HiveDecode extends UDF {
         String defaultValue = null;
 
         // 入参空置处理
-        if (sourceCodes == null || targetValues == null || ("\\N").equals(sourceCodes) || ("\\N").equals(targetValues) || ("").equals(sourceCodes) || ("").equals(targetValues)) {
+        if (sourceCodes == null || targetValues == null || ("\\N").equals(sourceCodes) || ("\\N").equals(targetValues) || sourceCodes.isEmpty() || targetValues.isEmpty()) {
             return null;
         }
         // 缺省值处理
@@ -35,7 +35,7 @@ public class HiveDecode extends UDF {
         }
 
         // 入参空值处理
-        if (sourceColumns == null || ("\\N").equals(sourceColumns) || ("").equals(sourceColumns)) {
+        if (sourceColumns == null || ("\\N").equals(sourceColumns) || sourceColumns.isEmpty()) {
             if ("self".equals(defaultValue)) {
                 defaultValue = null;
             }

@@ -18,7 +18,7 @@ public class TimeRangeMatch extends UDF {
         // 设定返回值
         String matchResult = "N";
         // 入参空值处理
-        if (time == null || timeRanges == null || ("\\N").equals(time) || ("\\N").equals(timeRanges) || ("").equals(time) || ("").equals(timeRanges)) {
+        if (time == null || timeRanges == null || ("\\N").equals(time) || ("\\N").equals(timeRanges) || time.isEmpty() || timeRanges.isEmpty()) {
             return null;
         }
         String[] arrayTimeRanges = timeRanges.split("\\|");

@@ -22,7 +22,7 @@ public class StringCompare extends UDF {
         Double rate = null;
 
         // 入参空值处理
-        if (stringA == null || ("\\N").equals(stringA) || ("").equals(stringA) || stringB == null || ("\\N").equals(stringB) || ("").equals(stringB)) {
+        if (stringA == null || ("\\N").equals(stringA) || stringA.isEmpty() || stringB == null || ("\\N").equals(stringB) || stringB.isEmpty()) {
             return null;
         }
 

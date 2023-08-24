@@ -27,7 +27,7 @@ public class LinearScoreCalculation extends UDF {
         String indScore;
 
         // 入参空值处理
-        if (indValue == null || sortType == null || stringRanges == null || stringScores == null || ("\\N").equals(stringRanges) || ("\\N").equals(stringScores) || ("\\N").equals(indValue) || ("\\N").equals(sortType) || ("").equals(stringRanges) || ("").equals(stringScores)) {
+        if (indValue == null || sortType == null || stringRanges == null || stringScores == null || ("\\N").equals(stringRanges) || ("\\N").equals(stringScores) || ("\\N").equals(indValue) || ("\\N").equals(sortType) || stringRanges.isEmpty() || stringScores.isEmpty()) {
             return null;
         }
 
