@@ -34,5 +34,9 @@ public class test {
         StringCompare sc = new StringCompare();
         Double result10 = sc.evaluate("北京市东城区", "北京市东城区第一医院", "MAX");
         System.out.println(result10);
+
+        EnhancedDateDiff edd = new EnhancedDateDiff();
+        Double result11 = edd.evaluate("2023-12-12 12:12:11", "2023-12-04 09:08:23", "y");
+        System.out.printf("%f", result11);
     }
 }

@@ -14,6 +14,8 @@
 
 6、StringCompare：提供两个字符串之间的比较，输出相似度
 
+7、EnhancedDateDiff：增强的日期时间求差，可以自定义结果单位
+
 使用方法 (以下路径仅为示例, 需要上传 jar 包到实际运行的 hdfs 地址, 然后引用此地址)
 
 ```shell
@@ -34,4 +36,7 @@ create temporary function remove_dupe as 'com.hive.udf.RemoveDupe';
 
 add jar hdfs:///apps/hduser/hive_udf/StringCompare-1.0.jar;
 create temporary function string_compare as 'com.hive.udf.StringCompare';
+
+add jar hdfs:///apps/hduser/hive_udf/EnhancedDateDiff-1.0.jar;
+create temporary function enhanced_datediff as 'com.hive.udf.EnhancedDateDiff';
 ```
