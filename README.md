@@ -1,6 +1,6 @@
 # HiveUDF
 
-使用JDK 17 构建，需下载 [依赖包](https://mvnrepository.com/artifact/org.apache.hive/hive-exec/3.1.3)
+使用JDK 1.8 构建，需下载 [依赖包](https://mvnrepository.com/artifact/org.apache.hive/hive-exec/3.1.3)
 
 1、HiveDecode：提供类似Oracle的decode函数的转码功能 支持多个码值同时转换
 

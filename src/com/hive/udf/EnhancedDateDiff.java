@@ -57,12 +57,20 @@ public class EnhancedDateDiff extends UDF {
                 return null;
             }
         }
-        dateTimeFormat = switch (dateTimeString1.length()) {
-            case 19 -> "yyyy-MM-dd HH:mm:ss";
-            case 10 -> "yyyy-MM-dd";
-            case 8 -> "HH:mm:ss";
-            default -> null;
-        };
+        switch (dateTimeString1.length()) {
+            case 19:
+                dateTimeFormat = "yyyy-MM-dd HH:mm:ss";
+                break;
+            case 10:
+                dateTimeFormat = "yyyy-MM-dd";
+                break;
+            case 8:
+                dateTimeFormat = "HH:mm:ss";
+                break;
+            default:
+                dateTimeFormat = null;
+                break;
+        }
 
 
         // 入参处理 计算结果
@@ -78,15 +86,23 @@ public class EnhancedDateDiff extends UDF {
         }
 
         //结果格式转换
-        return switch (resultFormat) {
-            case "s" -> (double) longResult / 1000.0;        // 1000
-            case "m" -> (double) longResult / 60000.0;       // 1000*60
-            case "h" -> (double) longResult / 3600000.0;     // 1000*60*60
-            case "d" -> (double) longResult / 86400000.0;    // 1000*60*60*24
-            case "w" -> (double) longResult / 604800000.0;   // 1000*60*60*24*7
-            case "M" -> (double) longResult / 2592000000.0;  // 1000*60*60*24*30
-            case "y" -> (double) longResult / 31536000000.0; // 1000*60*60*24*365
-            default -> null;
-        };
+        switch (resultFormat) {
+            case "s":
+                return (double) longResult / 1000.0;        // 1000
+            case "m":
+                return (double) longResult / 60000.0;       // 1000*60
+            case "h":
+                return (double) longResult / 3600000.0;     // 1000*60*60
+            case "d":
+                return (double) longResult / 86400000.0;    // 1000*60*60*24
+            case "w":
+                return (double) longResult / 604800000.0;   // 1000*60*60*24*7
+            case "M":
+                return (double) longResult / 2592000000.0;  // 1000*60*60*24*30
+            case "y":
+                return (double) longResult / 31536000000.0; // 1000*60*60*24*365
+            default:
+                return null;
+        }
     }
 }
